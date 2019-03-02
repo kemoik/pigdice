@@ -26,7 +26,7 @@ var change = function() {
   if(player1.turn === "enabled") {
     player1.turn == "enabled";
     player2.turn == "disabled";
-  }else if (player2.turn === "enabled",) {
+  }else if (player2.turn === "enabled") {
     player2.turn == "enabled";
     player1.turn == "disabled";
 
@@ -56,7 +56,7 @@ $(document).ready(function(){
   $(".entry").submit(function(event){
     event.preventDefault();
     player1 = $("input#one").val();
-    player2 = $("input#two").val();.
+    player2 = $("input#two").val();
     $("#onee").text(player1);
     $("#twoo").text(player2);
     $("div#game").toggle();
