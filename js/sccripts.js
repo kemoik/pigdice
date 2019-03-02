@@ -4,8 +4,6 @@ var player = function(name,score,status){
   this.score = score;
   this.turn = turn;
 }
-var player1 =[];
-var player2 =[];
 
 player.prototype.addScore = function(){
   this.score += finalScore;

@@ -19,30 +19,34 @@
           <input id="one" class="form-control" type="text" name="player1" placeholder="Player One"><br>
           <input id="two" class="form-control" type="text" name="player2" placeholder="Player Two"><br>
         </div>
-         <button type="button" name="button" id="game" class="btn bg-info">HOW TO PLAY</button><br>
+        <button type="button" name="button" id="game" class="btn bg-info">HOW TO PLAY</button><br>
         <br>
-         <button type="submit" name="button" onclick="start()" id="start" class="btn bg-success">START</button>
+        <button type="submit" name="button" onclick="start()" id="start" class="btn bg-success">START</button>
       </form>
       <center />
       <div id="game">
         <div class="row">
-          <div id="gamer1" class="col-md-4">
+          <div id="gamer1" class="col-md-6">
             <h1>Player one</h1>
             <p><span id="onee"></span></p>
             <p><span class="score-one"></span></p>
           </div>
-          <div id="scores" class="col-md-4">
+          <div class="col-md-4">
             <p>Round Total:<span id="score-total"></span></p>
-             <button type="button" onclick="roll()" name="button" id="dice">ROLL</button>
-             <button type="button" name="button" id="hold">HOLD</button>
+            <button type="button" onclick="roll()" name="button" id="dice-one">ROLL</button>
+            <button type="button" name="button" id="hold-one">HOLD</button>
           </div>
-          <div id="gamer2" class="col-md-4">
+          <div id="gamer2" class="col-md-6">
             <h1>Player two</h1>
             <p><span id="twoo"></span></p>
             <p><span class="score-two"></span></p>
+            <p>Round Total:<span id="score-total"></span></p>
+            <button type="button" onclick="roll()" name="button" id="dice-two">ROLL</button>
+            <button type="button" name="button" id="hold-two">HOLD</button>
           </div>
         </div>
       </div>
+    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/sccripts.js"></script>
