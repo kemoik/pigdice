@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
 
 <head>
   <meta name="viewport" content="width=device-width user-scalable=no">
@@ -8,20 +8,44 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <title></title>
 </head>
-<center>
-  <div class="container">
-    <h1>PIG DICE GAME</h1>
-    <button type="button" class="btn btn primary" data-toggle="popover" data-placement="bottom" tiitle="HELP" name="button" data-content="Each turn,a payer repeatedly rolls a die until either a 1 is rolled or the player deccides to hold.If the player rolls a 1, they score nothing and it becomes the next player's turn.If the player rolls any other number, it is added to their turn total and the player's turn continues.If a player chooses to If a player chooses to hold, their turn total is added to their score, and it becomes the next player's turn"
-      </button>
-      <p>Players please enter your names in the spaces below,</p>
-      <label><input class="form-control" type="text" name="player1" placeholder="Player One" value=""></label><br>
-      <label><input class="form-control" type="text" name="player2" placeholder="Player Two" value=""></label>
-  </div>
-  <center />
 
-  <body>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
-  </body>
+<body>
+  <center>
+    <div class="container">
+      <h1>PIG DICE</h1>
+      <form class="entry">
+        <p>Players please enter your names in the spaces below,</p>
+        <div class="print">
+          <input id="one" class="form-control" type="text" name="player1" placeholder="Player One"><br>
+          <input id="two" class="form-control" type="text" name="player2" placeholder="Player Two"><br>
+        </div>
+        <button type="button" name="button" id="game" class="btn bg-info">HOW TO PLAY</button><br>
+        <br>
+        <button type="submit" name="button" onclick="start()" id="start" class="btn bg-success">START</button>
+      </form>
+      <center />
+      <div id="game">
+        <div class="row">
+          <div id="gamer1" class="col-md-4">
+            <h1>Player one</h1>
+            <p><span id="onee"></span></p>
+            <p><span class="score-one"></span></p>
+          </div>
+          <div id="scores" class="col-md-4">
+            <p>Round Total:<span id="score-total"></span></p>
+            <button type="button" onclick="roll()" name="button" id="dice">ROLL</button>
+            <button type="button" name="button" id="hold">HOLD</button>
+          </div>
+          <div id="gamer2" class="col-md-4">
+            <h1>Player two</h1>
+            <p><span id="twoo"></span></p>
+            <p><span class="score-two"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/sccripts.js"></script>
+</body>
 
 </html>
