@@ -45,7 +45,7 @@ var winner = function(){
 
     $("#roll").prop("disabled", true);
     $("#hold").prop("disabled", true);
-  }
+}
 }
 
 function start(){
@@ -67,12 +67,12 @@ $(document).ready(function(){
     $(".print").hide();
     $("#game").fadeIn();
 
-    $("#dice").click(function(){
+    $("button#dice").click(function(){
       roll();
       $("#round-total").text(totalScore);
     })
 
-    $("#hold").click(function(){
+    $("button#hold").click(function(){
       if (gamerOne.turn == "enabled") {
         gamerOne.addScore();
         $("#score-one").text(gamerOne.score);
