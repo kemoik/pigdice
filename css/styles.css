@@ -2,14 +2,35 @@
   display: none;
 }
 #photo {
-  background-image: url();
+  color: #9B9494;
 }
 #gamer1 {
   font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 #gamer2 {
   font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 .round {
   font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+#dice {
+  color: pink;
+}
+#hold {
+  color:pink;
+}
+.jumbotron {
+
+}
+#left {
+  font-family: 'Crete Round', serif;
+  font-size: 18px;
+}
+.head {
+  font-family: 'Audiowide', cursive;
+  font-size: 25px;
+
 }

@@ -1,12 +1,12 @@
 
 //Business Logic
-var Player = function(name, score, status){
+var gamer = function(name, score, turn){
   this.name = name;
   this.score = score;
   this.turn = turn;
 }
 
-Player.prototype.addScore = function(){
+gamer.prototype.addScore = function(){
   this.score += totalScore;
 }
 
@@ -51,8 +51,8 @@ var winner = function(){
 function start(){
   var fName=document.getElementById("one").value;
   var sName=document.getElementById("two").value;
-  document.getElementById("onee").innerHTML=fName;
-  document.getElementById("twoo").innerHTML=sName;
+  document.getElementById("gamerOne").innerHTML=fName;
+  document.getElementById("gamerTwo").innerHTML=sName;
 }
 
 
@@ -65,8 +65,8 @@ $(document).ready(function(){
 
     $(".print").hide();
     $("#game").show();
-    $("#player1").text(gamerOne.name);
-    $("#player2").text(gamerTwo.name);
+    $("#gamerOne").text(gamerOne.name);
+    $("#gamerTwo").text(gamerTwo.name);
 
     $("#dice").click(function(){
       roll();

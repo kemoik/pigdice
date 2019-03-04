@@ -9,48 +9,49 @@
   <link href="https://fonts.googleapis.com/css?family=Audiowide|Crete+Round|Fjalla+One|Open+Sans" rel="stylesheet">
   <title></title>
 </head>
-
-<body id="photo" >
-  <center>
+<center>
+<body id="photo">
     <div class="container">
-      <div class="jumbotron">
+      <div class="head">
       <h1>PIG DICE</h1>
-        <button type="button" name="button" id="play" class="btn bg-info" >HOW TO PLAY</button><br>
         </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9qidAv_dzlRgsZiGcZT9TNA2Vh-K8JHkfx3ElQtAsjd6Jk5uG" alt="">
       <form class="entry">
       <div class="print">
-        <p>Players please enter your names in the spaces below,</p>
-          <input id="one" class="form-control" type="text" name="player1" placeholder="Player One"><br>
-          <input id="two" class="form-control" type="text" name="player2" placeholder="Player Two"><br>
+        <p id="left">Players please enter your names in the spaces below,</p>
+          <input  required id="one" class="form-control" type="text" name="player1" placeholder="Player One"><br>
+          <input required  id="two" class="form-control" type="text" name="player2" placeholder="Player Two"><br>
       </div>
         <br>
         <button type="submit" name="button" onclick="start()" id="start" class="btn bg-success">START</button>
+        <center/>
       </form>
-      <center />
       <div id="game">
         <div class="row">
           <div id="gamer1" class="col-md-4">
             <h1>Player one</h1>
             <p><span id="gamerOne"></span></p>
+            <br><br>
             <p>SCORE:<span id="score-one"></span></p>
           </div>
           <div class="col-md-4">
             <div class="round">
+              <br><br>
             <p>Round Total: <span id="round-total"></span> </p>
-            <button type="button" name="button" id="dice">ROLL</button>
-            <button type="button" name="button" id="hold">HOLD</button>
+            <button type="button" name="button" id="dice" class="btn bg-info">ROLL</button>
+            <button type="button" name="button" id="hold" class="btn bg-info">HOLD</button>
           </div>
           </div>
           <div id="gamer2" class="col-md-4">
             <h1>Player two</h1>
             <p><span id="gamerTwo"></span></p>
+            <br><br>
             <p>SCORE:<span id="score-two"></span></p>
           </div>
       </div>
-    </div>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/sccripts.js"></script>
 </body>
-
 </html>
