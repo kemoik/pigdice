@@ -25,15 +25,7 @@ var roll = function(){
   }
 }
 
-var change = function(){
-  if (gamerOne.turn == "enabled") {
-    gamerTwo.turn = "disabled";
-    gamerTwo.turn = "enabled";
-  } else if (gamerTwo.turn == "enabled") {
-    gamerOne.turn = "enabled";
-    gamerTwo.turn = "disabled";
-  }
-}
+
 var winner = function(){
   if (gamerOne.score >= 100){
     alert( gamerOne.name + "  WINS ")
@@ -60,10 +52,10 @@ function start(){
 $(document).ready(function(){
   $(".entry").submit(function(event){
     event.preventDefault();
-    gamerOneName = $("#one").val();
-    gamerTwoName = $("#two").val();
-    $("#gamerOne").text(gamerOne.name);
-    $("#gamerTwo").text(gamerTwo.name);
+    var gamerOneName = $("#one").val();
+    var gamerTwoName = $("#two").val();
+    $("#gamerOne").text(gamerOneName);
+    $("#gamerTwo").text(gamerTwoName);
     $(".print").hide();
     $("#game").fadeIn();
 
