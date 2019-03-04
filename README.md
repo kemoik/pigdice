@@ -1,5 +1,5 @@
 # PIG DICE
-#### The pig dice game is played by two players,who roll a dice at different turn and when a player rolls a one ,the player looses the points of that current session, {Date of current version}
+#### The pig dice game is played by two players,who roll a dice at different turn and when a player rolls a one ,the player looses the points of that current session, Monday 4th March
 #### By **CALEB KEMOI**
 ## BDD
 | BEHAVIOUR                                  	| INPUT                                  	| OUTPUT                                                 	|
