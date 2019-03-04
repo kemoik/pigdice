@@ -67,12 +67,12 @@ $(document).ready(function(){
     $("button#hold").click(function(){
       if (gamerOne.turn == "enabled") {
         gamerOne.addScore();
-        $("#score-one").text(gamerOne.score);
+        $("#score-one").text(gamerOneName.score);
         winner();
         change();
       } else if (gamerTwo.turn == "enabled"){
         gamerTwo.addScore();
-        $("#score-two").text(gamerTwo.score);
+        $("#score-two").text(gamerTwoName.score);
         winner();
         change();
       }
