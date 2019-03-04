@@ -10,21 +10,22 @@
   <title></title>
 </head>
 <center>
-<body id="photo">
+
+  <body id="photo">
     <div class="container">
       <div class="head">
-      <h1>PIG DICE</h1>
-        </div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9qidAv_dzlRgsZiGcZT9TNA2Vh-K8JHkfx3ElQtAsjd6Jk5uG" alt="">
-      <form class="entry">
-      <div class="print">
-        <p id="left">Players please enter your names in the spaces below,</p>
-          <input  required id="one" class="form-control" type="text" name="player1" placeholder="Player One"><br>
-          <input required  id="two" class="form-control" type="text" name="player2" placeholder="Player Two"><br>
+        <h1>PIG DICE</h1>
       </div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9qidAv_dzlRgsZiGcZT9TNA2Vh-K8JHkfx3ElQtAsjd6Jk5uG" alt="">
+      <form class="entry">
+        <div class="print">
+          <p id="left">Players please enter your names in the spaces below,</p>
+          <input required id="one" class="form-control" type="text" name="player1" placeholder="Player One"><br>
+          <input required id="two" class="form-control" type="text" name="player2" placeholder="Player Two"><br>
+        </div>
         <br>
         <button type="submit" name="button" onclick="start()" id="start" class="btn bg-success">START</button>
-        <center/>
+        <center />
       </form>
       <div id="game">
         <div class="row">
@@ -37,10 +38,10 @@
           <div class="col-md-4">
             <div class="round">
               <br><br>
-            <p>Round Total: <span id="round-total"></span> </p>
-            <button type="button" name="button" id="dice" class="btn bg-info">ROLL</button>
-            <button type="button" name="button" id="hold" class="btn bg-info">HOLD</button>
-          </div>
+              <p>Round Total: <span id="round-total"></span> </p>
+              <button type="button" name="button" id="dice" class="btn bg-info">ROLL</button>
+              <button type="button" name="button" id="hold" class="btn bg-info">HOLD</button>
+            </div>
           </div>
           <div id="gamer2" class="col-md-4">
             <h1 id="line">Player two</h1>
@@ -48,11 +49,12 @@
             <br><br>
             <p>SCORE:<span id="score-two"></span></p>
           </div>
+        </div>
       </div>
-      </div>
-      </div>
+    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/sccripts.js"></script>
-</body>
+  </body>
+
 </html>
