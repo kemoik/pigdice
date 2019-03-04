@@ -2,7 +2,7 @@
   display: none;
 }
 #photo {
-  color: #9B9494;
+  background-color:#9B9494;
 }
 #gamer1 {
   font-size: 20px;
@@ -17,10 +17,10 @@
   font-family: 'Open Sans', sans-serif;
 }
 #dice {
-  color: pink;
+  color: brown;
 }
 #hold {
-  color:pink;
+  color:brown;
 }
 .jumbotron {
 
@@ -32,5 +32,8 @@
 .head {
   font-family: 'Audiowide', cursive;
   font-size: 25px;
+
+}
+{
 
 }
