@@ -30,8 +30,8 @@ var winner = function(){
   if (gamerOne.score >= 100){
     alert( gamerOne.name + "  WINS ")
 
-    $("#roll").prop("disabled", true);
-    $("#hold").prop("disabled", true);
+     $("#roll").prop("disabled", true);
+     $("#hold").prop("disabled", true);
   } else if (gamer.score >= 100){
     alert("!!!" + gamerTwo.name + "  WINS !!!")
 
