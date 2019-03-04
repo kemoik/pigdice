@@ -62,11 +62,10 @@ $(document).ready(function(){
     event.preventDefault();
     gamerOneName = $("#one").val();
     gamerTwoName = $("#two").val();
-
-    $(".print").hide();
-    $("#game").show();
     $("#gamerOne").text(gamerOne.name);
     $("#gamerTwo").text(gamerTwo.name);
+    $(".print").hide();
+    $("#game").fadeIn();
 
     $("#dice").click(function(){
       roll();
@@ -76,12 +75,12 @@ $(document).ready(function(){
     $("#hold").click(function(){
       if (gamerOne.turn == "enabled") {
         gamerOne.addScore();
-        $("#score-one").text(score-one.score);
+        $("#score-one").text(gamerOne.score);
         winner();
         change();
       } else if (gamerTwo.turn == "enabled"){
         gamerTwo.addScore();
-        $("#score-two").text(score-two.score);
+        $("#score-two").text(gamerTwo.score);
         winner();
         change();
       }
