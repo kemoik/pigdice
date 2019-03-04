@@ -1,35 +1,50 @@
-//BUSINESS LOGIC
-var player = function(name,score,status){
+
+//Business Logic
+var Player = function(name, score, status){
   this.name = name;
   this.score = score;
   this.turn = turn;
 }
 
-player.prototype.addScore = function(){
-  this.score += finalScore;
+Player.prototype.addScore = function(){
+  this.score += totalScore;
 }
 
+var gamerOne = {};
+var gamerTwo = {};
+
 var dice = 0;
-var finalScore=0;
- function roll() {
-   var player1 =[];
-   var player2 =[];
-  var dice = Math.floor(Math.random()*6)+ 1;
-  if(dice != 1){
-    (finalScore += dice)
-  }else {
-    (finalScore = 0);
+var totalScore= 0;
+var roll = function(){
+  dice = Math.floor(Math.random()*6) + 1;
+  if (dice != 1){
+    totalScore += dice
+  } else {
+    totalScore = 0;
     change();
   }
 }
-var change = function() {
-  if(player1.turn === "enabled") {
-    player1.turn == "enabled";
-    player2.turn == "disabled";
-  }else if (player2.turn === "enabled") {
-    player2.turn == "enabled";
-    player1.turn == "disabled";
 
+var change = function(){
+  if (gamerOne.turn == "enabled") {
+    gamerTwo.turn = "disabled";
+    gamerTwo.turn = "enabled";
+  } else if (gamerTwo.turn == "enabled") {
+    gamerOne.turn = "enabled";
+    gamerTwo.turn = "disabled";
+  }
+}
+var winner = function(){
+  if (gamerOne.score >= 100){
+    alert( gamerOne.name + "  WINS ")
+
+    $("#roll").prop("disabled", true);
+    $("#hold").prop("disabled", true);
+  } else if (gamer.score >= 100){
+    alert("!!!" + gamerTwo.name + "  WINS !!!")
+
+    $("#roll").prop("disabled", true);
+    $("#hold").prop("disabled", true);
   }
 }
 
@@ -41,46 +56,37 @@ function start(){
 }
 
 
-
-
-
-
-
-
-
-
-
-
 //UI LOGIC
 $(document).ready(function(){
   $(".entry").submit(function(event){
     event.preventDefault();
-    player1 = $("input#one").val();
-    player2 = $("input#two").val();
-    $("#onee").text(player1);
-    $("#twoo").text(player2);
-    $("div#game").toggle();
-    $(".entry").hide();
+    gamerOneName = $("#one").val();
+    gamerTwoName = $("#two").val();
 
-    $("#roll").click(function() {
+    $(".print").hide();
+    $("#game").show();
+    $("#player1").text(gamerOne.name);
+    $("#player2").text(gamerTwo.name);
+
+    $("#dice").click(function(){
       roll();
-      $("#scores").text(finalscore)
+      $("#round-total").text(totalScore);
     })
 
-    $("#hold").click(function() {
-      if(player1.turn === "enabled") {
-        player1.addScore();
-        $("score-one").text(player1.score);
+    $("#hold").click(function(){
+      if (gamerOne.turn == "enabled") {
+        gamerOne.addScore();
+        $("#score-one").text(score-one.score);
         winner();
         change();
-      } else if (player2.status == "enabled"){
-        player2.addScore();
-        $("score-two").text(player2.score);
+      } else if (gamerTwo.turn == "enabled"){
+        gamerTwo.addScore();
+        $("#score-two").text(score-two.score);
         winner();
         change();
-     }
-        finalScore = 0
-        $("#scores").text(finalscore)
-   })
-});
+      }
+      totalScore = 0;
+      $("#round-total").text(roundTotal);
+    })
+  })
 });

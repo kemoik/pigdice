@@ -6,20 +6,23 @@
   <meta charset="utf-8">
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Audiowide|Crete+Round|Fjalla+One|Open+Sans" rel="stylesheet">
   <title></title>
 </head>
 
-<body>
+<body id="photo" >
   <center>
     <div class="container">
+      <div class="jumbotron">
       <h1>PIG DICE</h1>
+        <button type="button" name="button" id="play" class="btn bg-info" >HOW TO PLAY</button><br>
+        </div>
       <form class="entry">
+      <div class="print">
         <p>Players please enter your names in the spaces below,</p>
-        <div class="print">
           <input id="one" class="form-control" type="text" name="player1" placeholder="Player One"><br>
           <input id="two" class="form-control" type="text" name="player2" placeholder="Player Two"><br>
-        </div>
-        <button type="button" name="button" id="game" class="btn bg-info">HOW TO PLAY</button><br>
+      </div>
         <br>
         <button type="submit" name="button" onclick="start()" id="start" class="btn bg-success">START</button>
       </form>
@@ -28,20 +31,21 @@
         <div class="row">
           <div id="gamer1" class="col-md-4">
             <h1>Player one</h1>
-            <p><span id="onee"></span></p>
-            <p><span class="score-one"></span></p>
+            <p><span id="gamerOne"></span></p>
+            <p>SCORE:<span id="score-one"></span></p>
           </div>
           <div class="col-md-4">
-            <p>Round Total:<span id="score-total"></span></p>
-            <button type="button" onclick="roll()" name="button" id="dice-one">ROLL</button>
-            <button type="button" name="button" id="hold-one">HOLD</button>
+            <div class="round">
+            <p>Round Total: <span id="round-total"></span> </p>
+            <button type="button" name="button" id="dice">ROLL</button>
+            <button type="button" name="button" id="hold">HOLD</button>
+          </div>
           </div>
           <div id="gamer2" class="col-md-4">
             <h1>Player two</h1>
-            <p><span id="twoo"></span></p>
-            <p><span class="score-two"></span></p>
+            <p><span id="gamerTwo"></span></p>
+            <p>SCORE:<span id="score-two"></span></p>
           </div>
-        </div>
       </div>
     </div>
     </div>

@@ -1,3 +1,15 @@
 #game {
   display: none;
 }
+#photo {
+  background-image: url();
+}
+#gamer1 {
+  font-size: 20px;
+}
+#gamer2 {
+  font-size: 20px;
+}
+.round {
+  font-size: 20px;
+}
